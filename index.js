@@ -20,21 +20,21 @@ const questions = [
         name: 'Project_Name',
         message: 'Enter the title of your project: ',
     },
-    // {
-    //     type: 'input',
-    //     name: 'Description_Info',
-    //     message: 'Enter a Description for your project: ',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'Installation_Info',
-    //     message: 'Enter the Installation Information: ',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'Usage_Info',
-    //     message: 'Enter the Usage Information: ',
-    // },
+    {
+        type: 'input',
+        name: 'Description_Info',
+        message: 'Enter a Description for your project: ',
+    },
+    {
+        type: 'input',
+        name: 'Installation_Info',
+        message: 'Enter the Installation Information: ',
+    },
+    {
+        type: 'input',
+        name: 'Usage_Info',
+        message: 'Enter the Usage Information: ',
+    },
     {
         type: 'list',
         name: 'License_Info',
@@ -55,16 +55,16 @@ const questions = [
             {value: 'unlicense', name: "The Unlicense"},
         ]
     },
-    // {
-    //     type: 'input',
-    //     name: 'Contributions_Info',
-    //     message: 'Enter how people can help contribute: ',
-    // },
-    // {
-    //     type: 'input',
-    //     name: 'Tests_Info',
-    //     message: 'Enter the test information: ',
-    // },
+    {
+        type: 'input',
+        name: 'Contributions_Info',
+        message: 'Enter how people can help contribute: ',
+    },
+    {
+        type: 'input',
+        name: 'Tests_Info',
+        message: 'Enter the test information: ',
+    },
 ];
 
 // TODO: Create a function to write README file
@@ -150,4 +150,4 @@ function processResponses(new_responses) {
 }
 
 // Function call to initialize app
-init()  
+init()
