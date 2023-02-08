@@ -20,21 +20,21 @@ const questions = [
         name: 'Project_Name',
         message: 'Enter the title of your project: ',
     },
-    {
-        type: 'input',
-        name: 'Description_Info',
-        message: 'Enter a Description for your project: ',
-    },
-    {
-        type: 'input',
-        name: 'Installation_Info',
-        message: 'Enter the Installation Information: ',
-    },
-    {
-        type: 'input',
-        name: 'Usage_Info',
-        message: 'Enter the Usage Information: ',
-    },
+    // {
+    //     type: 'input',
+    //     name: 'Description_Info',
+    //     message: 'Enter a Description for your project: ',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'Installation_Info',
+    //     message: 'Enter the Installation Information: ',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'Usage_Info',
+    //     message: 'Enter the Usage Information: ',
+    // },
     {
         type: 'list',
         name: 'License_Info',
@@ -55,16 +55,16 @@ const questions = [
             {value: 'unlicense', name: "The Unlicense"},
         ]
     },
-    {
-        type: 'input',
-        name: 'Contributions_Info',
-        message: 'Enter how people can help contribute: ',
-    },
-    {
-        type: 'input',
-        name: 'Tests_Info',
-        message: 'Enter the test information: ',
-    },
+    // {
+    //     type: 'input',
+    //     name: 'Contributions_Info',
+    //     message: 'Enter how people can help contribute: ',
+    // },
+    // {
+    //     type: 'input',
+    //     name: 'Tests_Info',
+    //     message: 'Enter the test information: ',
+    // },
 ];
 
 // TODO: Create a function to write README file
@@ -117,6 +117,7 @@ function init() {
 function processResponses(new_responses) {
     let template = fs.readFileSync('template.md', 'utf8');
     // console.log(new_responses);
+    let newVal;
     for (const [key, value] of Object.entries(new_responses)) {
         if (key != 'Project_Name' && key != 'License_Info' && key != 'Git_Owner') {
             template = template.replace(`{${key}}`, value.trim());
@@ -131,7 +132,12 @@ function processResponses(new_responses) {
                 let name = response.data.name.trim().replace(' ', '%20');
                 let url = `https://choosealicense.com/licenses/${response.data.key}`;
                 let body = response.data.body;
+                const currentYear = new Date().getFullYear();
+
                 let badge = `[![${response.data.name}](https://img.shields.io/badge/license-${name}-blue.svg)](${url})`;
+
+                body = body.replace('[year]', currentYear);
+                body = body.replace('[fullname]', newVal);
 
                 template = template.replace('{Badge_Icon}', badge);
                 template = template.replace(`{${key}}`, body);
