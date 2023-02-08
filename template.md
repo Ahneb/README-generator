@@ -1,10 +1,16 @@
 # {Project_Name}
-
+{Badge_Icon}
 ## Description
 {Description_Info}
 
 ## Table of Contents
-{ToC_Info}
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 {Installation_Info}
@@ -12,20 +18,16 @@
 ## Usage
 {Usage_Info}
 
-## Credits
-{Credits_Info}
-
 ## License
 {License_Info}
 
-## Badges
-{Badges_Info}
-
-## Features
-{Features_Info}
-
-## How to Contribute
+## Contributing
 {Contributions_Info}
 
 ## Tests
 {Tests_Info}
+
+## Questions
+Contact me at:
+{Git_Owner}
+{Email}
