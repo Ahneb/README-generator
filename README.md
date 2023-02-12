@@ -3,7 +3,7 @@
 ## Description
 This is a CLI based `README.md` generator. By prompting the user with multiple questions regarding information for the readme, it produces a template that can be copy and pasted into a readme file. This application makes use of inquirer with inputs and lists to gather needed information and then uses the fs package to read and write the information into a `result.md` file as raw markdown text. License information is generated based off of the github api information. A badge with a link to githubs licenses page is made and placed at the top of the readme.
 
-![Link to Istructional Video Guide]()
+[Link to Istructional Video Guide](https://www.youtube.com/watch?v=QtO9FTV_Lgs)
 
 ## Table of Contents
 - [Description](#description)
